@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Masuk</title>
+	<script src="jquery-3.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<style type="text/css">
+		.button {
+		    background-color: #2095ff;;
+		    border: none;
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		    border-radius: 25px;
+		 }
+		 input[type=text],input[type=password] {
+		    width: 100%;
+		    box-sizing: border-box;
+		    border: 2px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-image: url('searchicon.png');
+		    background-position: 10px 10px; 
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div style="padding: 10px; position: relative;">
+			<img src="logo.jpeg" style="height: 50px;border-right: solid 1px black; margin-right: 10px;padding: 10px;">
+			<span style="font-size: 40px;position: absolute;top: 5px;">
+			Sosial Media</br>Universitas Ahmad Dahlan</span>
+			<a href="imk.html" class="button" style="float: right;">Belum Punya Akun ?</a>
+
+		</div>
+	</header>
+	<div class="container">
+
+		<div class="report">
+			ERROR
+			<a class="close" href="#">x</a>
+		</div>
+		<div class="form">
+			<div class="progres">
+				<center><h1 style="color: #2095ff;">Halaman Masuk</h1></center>
+			</div>
+		</div>
+		<div class="form">
+			<div class="progres" style="padding: 20px;">
+				<center><h4 style="color: #2095ff; ">Silahkan Isi</h4></center>
+				<form class="progres">
+					<input type="text" name="nim" placeholder="NIM" autofocus required>
+					<input type="password" name="pass" placeholder="Pssword" required>
+					<input type="submit" value="Masuk >>" name="masuk" class="button" style="width: 100%;" >
+					<input type="Reset" value="Reset <<" name="masuk" class="button" style="width: 100%;">
+				</form>
+			</div>
+		</div>
+</body>
+</html>
+<script type="text/javascript">
+	$('div.half-warp>input').blur(function(){
+		if($(this).val()!=""){
+			$(this).addClass('filled');
+			$(this).removeClass('error');
+		}else{
+			$(this).addClass('error');
+			$(this).removeClass('filled');
+		}
+	});
+	$('.report a').click(function(){
+		console.log($(this).parent().fadeOut('1000'));
+	});
+</script>

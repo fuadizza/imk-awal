@@ -1,0 +1,226 @@
+body{
+	background-color: rgba(0, 0, 0, 0.11);
+	min-width: 1000px;
+	margin: 0;
+	background: url(./background.jpeg);
+	background-size: cover;
+	font-family: Arial, Helvetica, sans-serif;
+}
+header{
+	background-color: #FFFFFF;
+	display: block;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.container{
+	margin:50px auto;
+	width: 600px;
+}
+div.report{
+	padding: 20px;
+	width: calc(100% - 40px);
+	background: #ffd0d0;
+	overflow: auto;
+	margin: 40px 0 ;
+	border: solid 1px #ff0000;
+	position: relative;
+	color: #f08198;
+	font-size: 1.23077em;
+	text-align: center;
+}
+a.close{
+	position: absolute;
+	top: 0px;
+    right: 5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+div.form{
+	background: #FFFFFF;
+	overflow: auto;
+}
+div.isi{
+	padding: 20px;
+	overflow: auto;
+}
+div.progres{
+	overflow: auto;
+}
+div.prog{
+	width: calc(50% - 42px);
+	margin:0;
+	padding: 21px;
+	color: #adb6be;
+	border-bottom: 1px solid #adb6be;
+}
+div.prog:nth-child(odd){
+	float:left;
+}
+div.prog:nth-child(even){
+	float:right;
+}
+div.prog.active,div.prog.active > span.number{
+	border-color: #2095ff;
+	color: #2095ff;
+}
+span.number{
+	display: inline-block;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 1px solid #adb6be;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+div.half-warp{
+	width: calc(100% / 2 - 10px);
+	margin-bottom: 50px;
+	position: relative;
+	
+}
+div.half-warp:nth-last-child(1),div.half-warp:nth-last-child(2){
+	margin-bottom: 0;
+}
+div.half-warp:nth-child(odd){
+	float: left;
+	margin-right: 20px;
+}
+div.half-warp:nth-child(even){
+	float: right;
+}
+input[type=text]{
+	width: 90%;
+	border:none;
+	border-bottom: 1px solid #dde3e8;
+	outline: none;
+	padding:5px 10px;
+	color: #657886;
+	font-family: "MuseoSans-300",Helvetica,Arial;
+}
+input[type=password]{
+	width: 90%;
+	border:none;
+	border-bottom: 1px solid #dde3e8;
+	outline: none;
+	padding:5px 10px;
+	color: #657886;
+}
+input:focus{
+	//border-color: #2095ff;
+}
+label{
+	color: #adb6be;
+    font-size: 13px;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 8px;
+    -moz-transition: ease 0.2s all;
+    -o-transition: ease 0.2s all;
+    -webkit-transition: ease 0.2s all;
+    transition: ease 0.2s all;
+}
+input:focus+label{
+	top: -10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #2095ff;
+}
+div.half-warp > input.filled ~ label, div.half-warp > input:hover ~ label{
+	top: -10px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.bar{
+	position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+}
+.bar:before{
+	left:50%;
+}
+.bar:after{
+	right:50%;
+}
+.bar:after,.bar:before{
+    content: '';
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #2095ff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+div.half-warp > input.error ~ .bar{
+	display: none;
+}
+
+div.half-warp > input.error {
+	border-color: #ec2b6b;
+}
+div.half-warp > input.error ~ .require{
+	display: inline;
+}
+div.half-warp>span.require{
+	position: absolute;
+	margin-top: 4px;
+	margin-left: 5px;
+    color: #ec2b6b;
+    font-size: 0.7em;
+    left: 0;
+    bottom: -15px;
+    display: none;
+}
+
+input:focus ~ .bar:after,input:focus ~ .bar:before{
+	width: 50%;
+}
+div.submit{
+	overflow: auto;
+	width: 100%;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+div.submit div{
+	color: #657886;
+	font-family: "MuseoSans-300",Helvetica,Arial;
+	margin:5px auto;
+	text-align: center;
+	width: 100%;
+}
+div.submit a{
+	text-decoration: none;
+	color: #2095ff;
+}
+button[type=submit]{
+	color:#2095ff;
+	padding: 0 20px;
+    border: 1px solid #2095ff;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    line-height: 35px;
+    min-width: 120px;
+    margin: 5px auto;
+    display: inline-block;
+    border-radius: 20px;
+}
+button[type=submit]:hover{
+	color: #fff;
+    background-color: #2095ff;
+}
+button[type=submit].right{
+	float: right;
+	margin-right: 20px;
+}
+button[type=submit].center{
+	margin:0 calc(100% / 2 - 60px);
+}
